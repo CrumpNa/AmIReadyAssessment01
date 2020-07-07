@@ -50,16 +50,17 @@ public class IntegerArrayUtils {
         if(intArray.length==1){
             largest=intArray[0]; 
         }else{
-            for (int i=1;i<intArray.length-1;i++){
+            for (int i=0;i<intArray.length-1;i++){
                 int num=intArray[i];
-                int prevNum=intArray[i-1];
+                int nextNum=intArray[i+1];
 
-                if(num>prevNum){
-                    largest=num; 
-                    i++; 
-                }else{
-                    largest=num;
+                if(num>nextNum){
+                    int temp = num;  
+                    num = nextNum;  
+                    nextNum = temp;  
+                    temp=largest;   
                 }
+
             }
 
         }
