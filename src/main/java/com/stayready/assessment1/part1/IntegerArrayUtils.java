@@ -46,24 +46,17 @@ public class IntegerArrayUtils {
      * @return the largest integer in intArray
      */
     public static Integer getLargest(Integer[] intArray) {
-        int largest=0; 
-        if(intArray.length==1){
-            largest=intArray[0]; 
-        }else{
-            for (int i=0;i<intArray.length-1;i++){
-                int num=intArray[i];
-                int nextNum=intArray[i+1];
-
-                if(num>nextNum){
-                    int temp = num;  
-                    num = nextNum;  
-                    nextNum = temp;  
-                    temp=largest;   
-                }
-
-            }
-
-        }
+        
+        int largest=intArray[0];  //start largest value at first index of array 
+        for (int i = 1; i < intArray.length; i++) {
+        //loop starts at second elem in array 
+           if (intArray[i] > largest) {
+           //if next elem is greater, make it the new largest value 
+               largest = intArray[i]; }
+           //runs thru the array to see which is greater 
+          
+    }
+           
         return largest;
     }
 }
