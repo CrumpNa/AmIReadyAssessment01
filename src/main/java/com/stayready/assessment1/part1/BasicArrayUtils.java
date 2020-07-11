@@ -30,7 +30,7 @@ public class BasicArrayUtils {
        
         for(int i=0; i<stringArray.length/2; i++){ 
             String temp = stringArray[i]; //when i=0,"the" is stored in temp . when i=1, "quick"
-            stringArray[i] = stringArray[stringArray.length -i -1]; //"brown" replaces "the" in the 1st index  
+            stringArray[i] = stringArray[stringArray.length -1-i]; //move the elem at the (last index minus curr index) to first index ,"brown" replaces "the" in the 1st index  
             stringArray[stringArray.length -i -1] = temp; //"the" replaces "brown"
             //swaps like this take place, until i reaches the midpoint index 1.5 aka rounds to 1, so the swap only happens once w/ an array a length of 3
          }

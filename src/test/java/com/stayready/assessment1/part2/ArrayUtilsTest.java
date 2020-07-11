@@ -9,7 +9,7 @@ public class ArrayUtilsTest {
         // Given
         Integer valueToEvaluate = 7;
         Integer expected = 3;
-        Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
+        Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7}; //7 occurs 3 times
 
         // When
         Integer actual = ArrayUtils.getNumberOfOccurrences(inputArray, valueToEvaluate);

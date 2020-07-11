@@ -51,19 +51,7 @@ public class BasicStringUtils {
             reversedString=reversedString+reversedWord+" ";//add the reversed indiv word to the overall 
             //reversed String plus a space 
         }
-        /*
-        for (int x=words.length-1;x<words.length;x++){
-            //this loop goes through the array (except the last word)to get each indiv word 
-            String word=words[x]; //word=indiv word in array 
-            String reversedWord="";//variable for reversed indiv word 
-            for (int y=word.length()-1;y>0;y--){
-                //this loop starts at the end of an indiv word (last index)
-                reversedWord=reversedWord+word.charAt(y); 
-                //then concatenates the last char at the end of the word to the front of reversedWord 
-            }
-            reversedString=reversedString+reversedWord;//add the reversed indiv word to the overall 
-            //reversed String minus a space to fulfill the unit test 
-        }*/
+        
         return reversedString; 
         }
         
@@ -91,6 +79,7 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
+
         return null;
     }
 

@@ -8,7 +8,16 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+
+        int counter=0;//keeps track of the objectToCount
+
+        int arraySize=objectArray.length; //size of the inputted array
+        for (int i=0;i<arraySize;i++){ //go through the array
+            if(objectArray[i]==objectToCount){
+                counter+=1; //add to the counter
+            }
+        }
+        return counter;
     }
 
     /**
@@ -18,6 +27,25 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
+        //Integer valueToRemove = 7;
+        //Object[] expected = {1, 2, 8, 4, 5, 0, 9, 8};
+        //objectArray={1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
+        int indexToRemove=0; //this index is where the objectToRemove is postioned in the array
+        int arraySize=objectArray.length; //size of the inputted array
+        int size=arraySize-1;
+        int newArray []=new int [size-1]; //new array without objectToRemove
+        for (int i=0;i<arraySize;i++){ //identify position of objecttoRemove
+            if (objectArray[i]==objectToRemove) {
+                indexToRemove+=i;
+
+            }
+        }
+        for(int i=0;i<arraySize;i++){
+            if(i!=indexToRemove){
+                newArray[i]= (int) objectArray[i];
+            }
+        }
+
         return null;
     }
 

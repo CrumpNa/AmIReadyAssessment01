@@ -13,6 +13,8 @@ public class CuttingBoard {
      * A cutting board has two instance fields:
      *  - price is a double
      */
+    double price0;
+
 
 
     /*
@@ -23,10 +25,11 @@ public class CuttingBoard {
      *
      */
 
+    public CuttingBoard(double price){
+        //constructor
+        this.price0=price;}
 
-
-
-    /*
+        /*
      * METHODS
      *
      * 1. Create a getter method called "getPrice" to return the price.
@@ -38,5 +41,15 @@ public class CuttingBoard {
      *      "This cutting board costs $[price]"
      *      Example: "This cutting board costs $19.99"
      */
+
+    public double getPrice(){
+        return price0;
+
+    }
+    public String getDescription(){
+        String descrip=  "This cutting board costs $"+price0;
+            return descrip;
+
+        }
 
 }
